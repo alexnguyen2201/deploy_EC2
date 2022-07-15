@@ -27,6 +27,9 @@ server {
 ```
 
 80 là default port của HTTP là nơi các traffic comming.
+
+         Muốn cài HTTPS thì phải là 443, là default port cuar HTTPS
+
 54.151.166.96 là địa chỉ public IPv4 của EC2 instance
 
 location / là nơi Nginx route các traffic đến nơi đó
@@ -38,5 +41,21 @@ sudo service nginx restart
 ```
 restart lại để load config
 
+## Clone the FastAPI project
+
+```console
+git clone <link_source_code_from_github>
+```
+ ## Install python libs
+ ```console
+ pip3 install -r requirements.txt
+ ```
+
+ ## Run Fastapi app
+ ```console
+ python3 -m uvicorn main:app
+ ```
 
 
+## Terminate Instance
+At AWS, Terminate Instance otherwise you need to charge
